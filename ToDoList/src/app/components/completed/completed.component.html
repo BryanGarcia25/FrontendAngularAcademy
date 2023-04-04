@@ -1,0 +1,16 @@
+<div class="card text-start">
+    <div class="card-body">
+      <h4 class="card-title">Tareas Completadas</h4>
+      <div *ngFor="let tarea of tareaTerminada; let i = index" class="row justify-content-center align-items-center g-2 mb-3">
+        <div class="col-6">
+            {{tarea}}
+        </div>
+        <div class="col-3">
+            <button class="btn btn-warning" (click)="regresarTareaPendiente(i)">Pendiente</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-danger" (click)="eliminarTareaCompletada(i)">Eliminar</button>
+        </div>
+    </div>
+    </div>
+  </div>
